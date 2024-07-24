@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "grammy": "^1.27.0",
+    "nodemon": "^3.1.4"
+  }
+}
