@@ -31,9 +31,9 @@ bot.command("start", async (ctx) => {
     "Click to get started!",
     "https://gamestaker-euro2024.vercel.app/"
   );
+
   await ctx.replyWithPhoto(
-    new InputFile("/thumbnail.png"),
-    // 'https://pbs.twimg.com/media/GPyTWnKXEAAb7fE?format=jpg&name=large',
+    "https://ipfs.io/ipfs/QmTvM9LXzgCuFTrWzJCHVFiMwUpu3rctYB6pt8nMadZoos?format=jpg&name=large",
     {
       reply_markup: menus,
       parse_mode: "HTML",
@@ -42,22 +42,22 @@ bot.command("start", async (ctx) => {
   );
 });
 
-bot.on("callback_query:data", async (ctx) => {
-  const data = ctx.callbackQuery.data;
-  switch (data) {
-    case "howToEarn":
-      const menus = new InlineKeyboard().webApp(
-        "Click to get started!",
-        "https://gamestaker-euro2024.vercel.app/"
-      );
-      await ctx.reply("Hello, this is just example.", {
-        reply_markup: menus,
-        parse_mode: "HTML",
-      });
-    default:
-      break;
-  }
-});
+// bot.on("callback_query:data", async (ctx) => {
+//   const data = ctx.callbackQuery.data;
+//   switch (data) {
+//     case "howToEarn":
+//       const menus = new InlineKeyboard().webApp(
+//         "Click to get started!",
+//         "https://gamestaker-euro2024.vercel.app/"
+//       );
+//       await ctx.reply("Hello, this is just example.", {
+//         reply_markup: menus,
+//         parse_mode: "HTML",
+//       });
+//     default:
+//       break;
+//   }
+// });
 
 (async () => {
   await bot.api.deleteWebhook();
